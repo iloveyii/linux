@@ -40,3 +40,9 @@ Icon=/home/alex/softwares/intellij/bin/idea.svg
 - List the dock apps `gsettings get org.gnome.shell favorite-apps`
 - Set custom launcher in dock `gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop','intellij.desktop', 'org.gnome.Terminal.desktop', 'google-chrome.desktop', 'firefox.desktop', 'gnome-control-center.desktop', 'org.gnome.tweaks.desktop']"`
 
+## Mount VM shared folder inside Ubuntu
+- Share a folder from guest
+- You can check the share folder inside guest as `vmware-hgfsclient`
+- Create an empty directory inside projects/docker
+- Mount it to a directory inside `~/projects/` by using command `/usr/bin/vmhgfs-fuse .host:/docker /home/alex/projects/devops/docker/ -o subtype=vmhgfs-fuse,allow_other`
+- Unmount `sudo umount ~/projects/devops`

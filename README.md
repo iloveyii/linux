@@ -46,3 +46,13 @@ Icon=/home/alex/softwares/intellij/bin/idea.svg
 - Create an empty directory inside projects/docker
 - Mount it to a directory inside `~/projects/` by using command `/usr/bin/vmhgfs-fuse .host:/docker /home/alex/projects/devops/docker/ -o subtype=vmhgfs-fuse,allow_other`
 - Unmount `sudo umount ~/projects/devops`
+
+# Ubuntu add SSH Keys
+- Login to server with root
+- Add new user `adduser abc`
+- Add user to sudo group `usermod -aG sudo abc`
+- Check that new user has sudo `id abc` 
+- Switch to new user `sudo su - abc`
+- Recheck that new user has sudo, `sud ls /root`
+- Make dir .ssh and add file `nano .ssh/authorized_keys` and paste your .ssh/id_rsa.pub key from your client computer
+- You should be able to login without password `ssh abc@host`

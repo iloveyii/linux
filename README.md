@@ -56,3 +56,6 @@ Icon=/home/alex/softwares/intellij/bin/idea.svg
 - Recheck that new user has sudo, `sud ls /root`
 - Make dir .ssh and add file `nano .ssh/authorized_keys` and paste your .ssh/id_rsa.pub key from your client computer
 - You should be able to login without password `ssh abc@host`
+## Use existing user
+- If you have a user login/password to a remote server, you don't need to use pass again and again
+- Add it user `ssh-copy-id ali@192.168.x.x`, and I think before this you may need to `ssh-keygen -t rsa -b 4096 -C "youremail@yahoo.com"` 
